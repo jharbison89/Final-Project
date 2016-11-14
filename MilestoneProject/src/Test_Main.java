@@ -5,9 +5,12 @@ public class Test_Main {
 	public static void main(String[] args){
 		
 		Scanner input = new Scanner(System.in);
-		PlayerManager agents = new PlayerManager();
 		
-		for(int i = 0; i < 10; i ++){
+		System.out.print("How many players: ");
+		int size = input.nextInt();
+		PlayerManager agents = new PlayerManager(size);
+		
+		for(int i = 0; i < size; i ++){
 			System.out.print("Enter Player name: ");
 			String name = input.next();
 			
